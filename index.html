@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lodziarnia Dominik Litterski</title>
+    <style>
+        body{
+            height:100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box{
+            width: 500px;
+            height: 700px;
+            background: linear-gradient(to right bottom, #71b7e6, #9b59b6);
+        }
+        #cena{
+            display: block;
+            color: crimson;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Lodziarnia u Domisia</h1>
+        <form action="#">
+            <div class="ice_count">
+                <span class="name">Ile gałek?</span>
+                <input type="text" placeholder="Podaj Ilość Gałek" name="ilosc" required>
+            </div>
+            <div class="rozek">
+                <span class="name">Jaki rożek</span>
+                <input type="radio" name="rozek" value="1"><span>Rożek</span>
+                <input type="radio" name="rozek" value="2"><span>Duży Rożek</span>
+                <input type="radio" name="rozek" value="2"><span>Potrójny Rożek</span>
+            </div>
+            <div class="dodadki">
+                <span class="name">Dodatki</span>
+                <input type="checkbox" name="add" value="3" ><span>Polewa Czekoladowa</span>
+                <input type="checkbox" name="add" value="3" ><span>Posypka</span>
+                <input type="checkbox" name="add" value="5" ><span>Polewa Owocowa</span>
+            </div>
+            <div class="vat">
+            <span class="name">Wybierz vat</span>
+                <select name="vat">
+                    <option value="0">0%</option>
+                    <option value="1.07">7%</option>   
+                    <option value="1.23">23%</option>   
+                </select>
+            </div>
+            <div class="Zniżka">
+                <span class="name">Zniżki</span>
+                <input type="radio" name="dis" value="0"><span>Brak</span>
+                <input type="radio" name="dis" value="0.8"><span>Ulgowa</span>
+                <input type="radio" name="dis" value="0.5"><span>Stałego Klienta</span>
+            </div>
+            <input type="button" value="Oblicz" onClick="obliczanie(this.form)"></input>
+            <span id="cena"></span>
+        </form>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
